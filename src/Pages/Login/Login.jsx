@@ -19,10 +19,10 @@ const Login = () => {
         const form= e.target;
         const name= form.name.value;
         const email= form.email.value;
-        const password= form.email.value;
+        const password= form.password.value;
         console.log({email, password});
 
-        const user= {email, password};
+        const user= {email};
         signInUser(email, password)
         .then(result=>{
             console.log(result.user);
@@ -30,7 +30,14 @@ const Login = () => {
                 displayName:name
             })
             .then(()=>{
-                console.log("updated successfully")
+                console.log("updated successfully");
+                Swal.fire({
+                    title: 'Logged in successfully',
+                    icon: 'success',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    
+                  });
+
             })
             .catch(error=>{
 
@@ -38,20 +45,20 @@ const Login = () => {
             })
 
 
-            axios.post('http://localhost:5000/users', user )
-            .then(res=>{
-                console.log(res);
-                console.log(res.data)
-                if(res.data.success){
+            // axios.post('http://localhost:5000/users', user )
+            // .then(res=>{
+            //     console.log(res);
+            //     console.log(res.data)
+            //     if(res.data.success){
                     
-                    // navigate(location?.state? location?.state : '/');
+            //         // navigate(location?.state? location?.state : '/');
 
-                }
+            //     }
                 
-            })
+            // })
         })
         .catch(error=>{
-            console.log("Error", error);y
+            console.log("Error", error);
             Swal.fire('Opps', 'Something went wrong', 'error');
         })
 
@@ -62,17 +69,27 @@ const Login = () => {
     
     // sign in with google if have account
     const handleSignInByGoogle=()=>{
-        loginwithGoogle()
-        .then(result=>{
-            console.log(result.user);
-            Swal.fire('Success', 'Logged in with Google successfully', 'success');
-        })
-        .catch(error=>{
-            console.error( error);
-            Swal.fire('Opps', 'Something went wrong', 'error');
-
-        })
-        
+        const proceed= confirm('You want to log in with Google');
+        if(proceed){
+            
+            loginwithGoogle()
+            .then(result=>{
+                console.log(result.user);
+                // Swal.fire('Success', 'Logged in with Google successfully', 'success');
+                Swal.fire({
+                    title: 'Logged in successfully',
+                    icon: 'success',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    
+                  });
+            })
+            .catch(error=>{
+                console.error( error);
+                Swal.fire('opps','SomeThing went wrong', 'error');
+    
+            })
+            
+        }
 
     }
 
@@ -81,7 +98,12 @@ const Login = () => {
         logInWithGithub()
         .then(result=>{
             console.log(result.user);
-            Swal.fire('Success', 'Logged in with Google successfully', 'success');
+            Swal.fire({
+                title: 'Logged in successfully',
+                icon: 'success',
+                html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                
+              });
         })
         .catch(error=>{
             console.error( error.message);

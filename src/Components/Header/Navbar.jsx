@@ -56,15 +56,19 @@ const Navbar = () => {
                 </ul>
                 </div>
                 <div className="navbar-end">
+                    
                     <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        {user?
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar ring-2 mx-2">
                         <div className="w-10 rounded-full">
                             {
                                 user? <img src={user.photoURL} /> : ""
                             }
                             
                         </div>
-                        </label>
+                        </label> : " "
+                        }
+                        
                         <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                         <li className='flex'>
                         <div  className='flex justify-between'>
@@ -87,6 +91,7 @@ const Navbar = () => {
                         <li className='font-bold text-fuchsia-600'>{user?<Link onClick={handleLogOut}>Logout</Link>: <Link to={'/login'}>Log in</Link> }</li>
                         </ul>
                     </div>
+                    
                 </div>
             </div>
         </div>

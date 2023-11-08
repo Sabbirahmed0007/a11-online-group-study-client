@@ -3,6 +3,8 @@ import { BiSolidShow } from 'react-icons/Bi';
 import { AiFillEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     
@@ -21,6 +23,33 @@ const Register = () => {
         const terms= form.terms.checked;
 
         console.log({name, email,password, terms})
+
+        createUser(email, password)
+        .then(result=>{
+            console.log(result.user);
+            updateProfile(result.user, {
+                displayName:name
+            })
+            .then(()=>{
+                console.log("updated successfully");
+                Swal.fire({
+                    title: 'Logged in successfully',
+                    icon: 'success',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    
+                  });
+
+            })
+            .catch(error=>{
+
+                console.error(error);
+            })
+
+        })
+        .catch(error=>{
+            console.log(error);
+            Swal.fire('opps', 'something went wrong', 'error');
+    })
         
 
     }
