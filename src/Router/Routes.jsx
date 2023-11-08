@@ -6,6 +6,7 @@ import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import CreateAssignment from '../Pages/CreateAssignment/CreateAssignment';
+import AllAssignment from '../Pages/Allassignment/AllAssignment';
 
 const Routes = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const Routes = createBrowserRouter([
             {
                 path:'/createassignment',
                 element:<CreateAssignment></CreateAssignment>
+            },
+            {
+                path:'/allassignment',
+                element:<AllAssignment></AllAssignment>
             }
         ]
     }

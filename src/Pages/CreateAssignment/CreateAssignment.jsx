@@ -14,12 +14,13 @@ const CreateAssignment = () => {
         const form= e.target;
 
         const title= form.title.value;
+        const email= form.email.value;
         const description= form.description.value;
         const img= form.img.value;
         const level= form.level.value;
         const marks= form.marks.value;
         const date= form.date.value;
-        const infos= {title, description, img, level, marks, date};
+        const infos= {title,email, description, img, level, marks, date};
         console.log(infos);
 
         axios.post('http://localhost:5000/createassignments', infos, {withCredentials:true})
@@ -50,8 +51,12 @@ const CreateAssignment = () => {
                         <input type="text" name="title" id="title" className='w-full  p-2 rounded-md  bg-gray-200'  placeholder="Leave the assignment's title"/>
                     </div>
                     <div className='my-2'>
+                        <label htmlFor="email" className='font-medium text-lg'>Email</label><br />
+                        <input type="email" name="email" id="email" className='w-full  p-2 rounded-md  bg-gray-200'  placeholder="Your Email ..."/>
+                    </div>
+                    <div className='my-2'>
                         <label htmlFor="description" className='font-medium text-lg'>Description</label><br />
-                        <textarea name="description" id="description" className='w-full  p-2 rounded-md  bg-gray-200' cols="30" rows="10"></textarea>
+                        <textarea name="description" id="description" className='w-full  p-2 rounded-md  bg-gray-200' cols="30" rows="10" placeholder='Description....'></textarea>
                     </div>
                     <div className='my-2'>
                         <label htmlFor="img" className='font-medium text-lg'>Image URL</label><br />
