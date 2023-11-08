@@ -9,7 +9,7 @@ const AllAssignment = () => {
     useEffect(()=>{
         axios.get('http://localhost:5000/allassignments', {withCredentials:true})
         .then(res=>{
-            console.log(res.data);
+            // console.log(res.data);
             setAllAssignment(res.data);
         })
         .catch(error=>{
