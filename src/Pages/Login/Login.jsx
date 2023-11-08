@@ -34,7 +34,7 @@ const Login = () => {
                 Swal.fire({
                     title: 'Logged in successfully',
                     icon: 'success',
-                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; height:45%; margin: 0 auto; " />',
                     
                   });
 
@@ -79,7 +79,7 @@ const Login = () => {
                 Swal.fire({
                     title: 'Logged in successfully',
                     icon: 'success',
-                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; height:45%; margin: 0 auto; " />',
                     
                   });
             })
@@ -101,7 +101,7 @@ const Login = () => {
             Swal.fire({
                 title: 'Logged in successfully',
                 icon: 'success',
-                html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; height:45%; margin: 0 auto; " />',
                 
               });
         })

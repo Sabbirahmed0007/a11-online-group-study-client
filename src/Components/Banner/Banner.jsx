@@ -26,7 +26,7 @@ const Banner = () => {
             <div className="carousel w-full ">
             {
                 banners.map((banner, index)=>
-                            <div id="slide1" className="carousel-item relative w-full  ">
+                            <div id="slide1" className="carousel-item relative w-full  " key={index}>
                                 <img src={banner.picture} className="w-full bg-cover h-screen" />
 
                                     {/* <div className='absolute  transform -translate-y-1/2 left-0 right-0 flex  text-left items-center w-full bg-transparent h-full  drop-shadow-2xl top-1/2  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.2 )] bg-blend-overlay'> */}

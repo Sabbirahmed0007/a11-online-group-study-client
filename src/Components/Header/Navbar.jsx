@@ -34,6 +34,7 @@ const Navbar = () => {
     const navlinks=<div className='flex flex-col lg:flex-row gap-3 text-lg'>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/'}>Home</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/login'}>Log in</NavLink>
+        <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/createassignment'}>Create Assignment</NavLink>
     </div>
     return (
         <div className='sticky top-0 drop-shadow-xl z-50 bg-sky-300'>

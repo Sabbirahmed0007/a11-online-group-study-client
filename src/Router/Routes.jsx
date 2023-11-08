@@ -5,6 +5,7 @@ import ErrorPage from '../Components/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import CreateAssignment from '../Pages/CreateAssignment/CreateAssignment';
 
 const Routes = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const Routes = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/createassignment',
+                element:<CreateAssignment></CreateAssignment>
             }
         ]
     }

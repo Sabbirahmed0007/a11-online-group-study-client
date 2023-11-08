@@ -24,6 +24,19 @@ const Register = () => {
 
         console.log({name, email,password, terms})
 
+                
+        // password validation
+        if (password.length < 8) {
+            console.log("Password must be  8 characters or longer");
+            Swal.fire('',"Password must be  8 characters or longer",'error');
+            
+            return;
+        } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/) {
+            return Swal.fire(
+              "Your password must contain at least a upperCase characters and a number.",'warning'
+            );
+          }
+
         createUser(email, password)
         .then(result=>{
             console.log(result.user);
@@ -35,7 +48,7 @@ const Register = () => {
                 Swal.fire({
                     title: 'Logged in successfully',
                     icon: 'success',
-                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; heigth:45%; margin: 0 auto; " />',
+                    html: '<img src="https://i.ibb.co/wskPXPh/499590ee23e372355cc076635b103c0e.jpg" alt="Your Image" style="max-width: 48%; height:45%; margin: 0 auto; " />',
                     
                   });
 
@@ -43,6 +56,7 @@ const Register = () => {
             .catch(error=>{
 
                 console.error(error);
+                Swal.fire('opps', 'something went wrong', 'error');
             })
 
         })
