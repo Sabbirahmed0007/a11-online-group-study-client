@@ -36,6 +36,7 @@ const Navbar = () => {
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/login'}>Log in</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/createassignment'}>Create Assignment</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/allassignment'}>All Assignment</NavLink>
+        <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/myassignments'}>My Assignment</NavLink>
     </div>
     return (
         <div className='sticky top-0 drop-shadow-xl z-50 bg-sky-200'>
