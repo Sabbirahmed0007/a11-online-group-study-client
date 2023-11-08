@@ -1,0 +1,13 @@
+    [
+        {
+            "picture": "https://example.com/banner1.jpg",
+            "title": "Join Our Study Groups",
+            "description": "Collaborate with friends and excel in your studies together."
+        },
+        {
+            "picture": "https://example.com/banner2.jpg",
+            "title": "Complete Assignments",
+            "description": "Create, submit, and grade assignments with your study buddies."
+        }
+    ]
+
