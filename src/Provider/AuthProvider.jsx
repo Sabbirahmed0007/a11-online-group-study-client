@@ -70,7 +70,7 @@ const AuthProvider = ({children}) => {
             // for getting token
             const loggedEmail= {email: userEamil};
             if(currentUser){
-                axios.post('http://localhost:5000/jwt', loggedEmail, {withCredentials:true})
+                axios.post('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/jwt', loggedEmail, {withCredentials:true})
                 .then(res=>{
                     console.log("token response",res.data);
                 })
@@ -78,7 +78,7 @@ const AuthProvider = ({children}) => {
 
             }
             else{
-                axios.post('http://localhost:5000/logout', loggedEmail, {withCredentials: true})
+                axios.post('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/logout', loggedEmail, {withCredentials: true})
                 .then(res=>{
                     console.log(res.data);
                 })

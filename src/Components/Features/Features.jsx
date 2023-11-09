@@ -7,7 +7,7 @@ const Features = () => {
     const [features, setFeatures]= useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/features' , {withCredentials:true})
+        axios.get('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/features' , {withCredentials:true})
         .then(res=>{
             console.log(res.data);
             setFeatures(res.data);
