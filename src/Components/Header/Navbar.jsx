@@ -33,10 +33,10 @@ const Navbar = () => {
 
     const navlinks=<div className='flex flex-col lg:flex-row gap-3 text-lg'>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/'}>Home</NavLink>
-        <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/login'}>Log in</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/createassignment'}>Create Assignment</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/allassignment'}>All Assignment</NavLink>
         <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/myassignments'}>My Assignment</NavLink>
+        <NavLink className={({isPanding, isActive})=> isPanding ? 'pending': isActive? 'active font-bold  text-red-600 ': 'bg-gradient-to-br from-indigo-700 to-green-500 text-transparent bg-clip-text font-bold'} to={'/login'}>Log in</NavLink>
     </div>
     return (
         <div className='sticky top-0 drop-shadow-xl z-50 bg-sky-200'>
@@ -46,7 +46,7 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <AiOutlineMenu className='text-xl text-indigo-800'></AiOutlineMenu>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40 text-center">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-center">
                         {navlinks}
                     </ul>
                 </div>
