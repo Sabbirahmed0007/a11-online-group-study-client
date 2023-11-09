@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Assignment = ({assignment}) => {
+const Assignment = ({assignment, handleDelete}) => {
     // console.log(assignment);
 
-    const {title, description, img, level, marks, date, email, _id}=assignment;
-    console.log(_id);
+    const {title, description, img, level, marks, date, email, _id, }=assignment;
+    // console.log(_id);
 
     return (
         <div>
@@ -19,9 +19,9 @@ const Assignment = ({assignment}) => {
                     <h2><span className='font-bold mt-3'>Total Marks</span> : {marks}</h2>
                 </div>
                 <div className='flex text-center justify-center items-center  gap-5 pb-5'>
-                    <Link to={ `/details/${_id}`}><button className='btn btn-secondary text-white font-bold'>Details</button></Link>
-                    <Link to={`/updatedata/${_id}`}><button className='btn btn-warning font-bold'>Update</button></Link>
-                    <Link to={`/updatedata/${_id}`}><button className='btn btn-outline font-bold text-red-600'>Delete</button></Link>
+                    <Link to={ `/details/${_id}`}><button className='btn btn-secondary text-white font-bold btn-sm'>Details</button></Link>
+                    <Link to={`/updatedata/${_id}`}><button className='btn btn-warning font-bold btn-sm'>Update</button></Link>
+                    <button className='btn btn-outline font-bold text-red-600 btn-sm' onClick= {()=>handleDelete(_id, email)}>Delete</button>
                 </div>
 
             </div>
