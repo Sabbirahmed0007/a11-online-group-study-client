@@ -33,7 +33,7 @@ const AllAssignment = () => {
 
     
     // useEffect(()=>{
-    //     axios.get('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/assignmentCount', {withCredentials:true})
+    //     axios.get('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/assignmentCount', {withCredentials:true})
     //     .then(res=>{
     //         console.log(res.data);
     //         setCount(res.data);
@@ -45,7 +45,7 @@ const AllAssignment = () => {
     useEffect(() => {
 
     
-        axios.get('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/assignmentCount', { withCredentials: true })
+        axios.get('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/assignmentCount', { withCredentials: true })
             .then(res => {
                 setCount(res.data.count);
             })
@@ -56,7 +56,7 @@ const AllAssignment = () => {
     
 
     // useEffect(()=>{
-    //     axios.get('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/allassignments', {withCredentials:true})
+    //     axios.get('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignments', {withCredentials:true})
     //     .then(res=>{
     //         // console.log(res.data);
     //         setAllAssignment(res.data);
@@ -67,7 +67,7 @@ const AllAssignment = () => {
     // },[])
 
     useEffect(()=>{
-        axios.get(`https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/allassignments?page=${currentPage}&size=${itemsPerPage}&level=${selectedDifficulty}`, { withCredentials: true })
+        axios.get(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignments?page=${currentPage}&size=${itemsPerPage}&level=${selectedDifficulty}`, { withCredentials: true })
 
         .then(res=>{
             console.log(res.data);
@@ -88,7 +88,7 @@ const AllAssignment = () => {
                 
     //     //     })
     //     //     .then(res=>res.json())
-    //         axios.delete(`https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/allassignment/${id}`, {withCredentials:true})
+    //         axios.delete(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignment/${id}`, {withCredentials:true})
     //         .then(res=>{
     //             console.log(res.data)
     //             if(res.data.deletedCount > 0){
@@ -105,7 +105,7 @@ const AllAssignment = () => {
         if (proceed) {
             // Compare the current user's email with the assignment creator's email
             if (user.email === assignmentEmail) {
-                axios.delete(`https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/allassignment/${id}`, { withCredentials: true })
+                axios.delete(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignment/${id}`, { withCredentials: true })
                     .then(res => {
                         if (res.data.success) {
                             Swal.fire('', 'Deleted successfully', 'success');

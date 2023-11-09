@@ -7,7 +7,7 @@ const Faqs = () => {
     const[faqs, setFaqs]=useState([]);
 
     useEffect(()=>{
-        axios.get('https://online-group-study-server-peyslyaw1-sabbirahmed0007.vercel.app/faqs' , {withCredentials:true})
+        axios.get('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/faqs' , {withCredentials:true})
         .then(res=>{
             console.log(res.data);
             setFaqs(res.data);
