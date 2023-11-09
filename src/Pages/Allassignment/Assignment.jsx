@@ -18,8 +18,8 @@ const Assignment = ({assignment, handleDelete}) => {
                     <h2 className='text-xl font-bold my-2 md:h-14'>{title}</h2>
                     <h2><span className='font-bold mt-3'>Total Marks</span> : {marks}</h2>
                 </div>
-                <div className='flex text-center justify-center items-center  gap-5 pb-5'>
-                    <Link to={ `/details/${_id}`}><button className='btn btn-secondary text-white font-bold btn-sm'>Details</button></Link>
+                <div className='flex text-center justify-center items-center  gap-2 pb-5'>
+                    <Link to={ `/details/${_id}`}><button className='btn btn-secondary text-white font-bold btn-sm'title='View Assignment'>Details</button></Link>
                     <Link to={`/updatedata/${_id}`}><button className='btn btn-warning font-bold btn-sm'>Update</button></Link>
                     <button className='btn btn-outline font-bold text-red-600 btn-sm' onClick= {()=>handleDelete(_id, email)}>Delete</button>
                 </div>

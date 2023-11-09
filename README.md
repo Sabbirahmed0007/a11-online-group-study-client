@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+web client site live link: https://online-group-study-13dd6.web.app/
 
-Currently, two official plugins are available:
+# Projects Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- it's a single page dynamic website 
+- it's on online group study and assignment 
+- there are 5 section on home page navbar, banner, features,  FAQs and footer 
+-there are 5 routes in the nev bar including home, create assignment , All Assignment, My Assignment, and sign up and at the end of the nav bar there is section for showing profile photo . it's a drop down 
+- click on the dropdown profile there a theme changer "dark" and "light" mode and name and log in and log out toggle button to log out you may click on the log out
+- There is a routes for ceating assignment . To create an assignment you have to log in first
+- There is a section for showing all assignment and it's a public routes
+- To see creator assignments of his own he must be logged in 
+- Then there is a routes for creating user account 
+- In the log in routes there are 2 more additional logging in option 'login  with google ' and 'log in with github'
+- 
+
+

@@ -40,12 +40,12 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'/updatedata/:id',
-                element:<Updatedata></Updatedata>,
+                element:<PrivateRoutes><Updatedata></Updatedata></PrivateRoutes>,
                 loader: ({params})=>fetch(`http://localhost:5000/singleassignment/${params.id}`)
             },
             {
                 path:'/details/:id',
-                element:<Details></Details>,
+                element:<PrivateRoutes><Details></Details></PrivateRoutes>,
                 loader: ({params})=>fetch(`http://localhost:5000/singleassignment/${params.id}`)
             },
             {

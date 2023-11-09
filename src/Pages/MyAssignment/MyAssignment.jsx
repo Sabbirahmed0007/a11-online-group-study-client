@@ -80,18 +80,21 @@ const MyAssignment = () => {
     };
 
 
+   
 
     return (
         <div>
-             {
-                assignments.length > 0 ?
+             {/* { */}
+            
+                {/*  assignments.length > 0 ? */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-3'>
                 {
                     assignments.map(assignment=><MyAssignmentCard key={assignment._id} assignment={assignment} handleDelete={handleDelete}></MyAssignmentCard>)
                 }
-            </div>:
+            </div>
+            {/* :
             <div className=''><p className='font-bold text-3xl text-center my-40'>No assignment Created</p></div>
-             }
+             } */}
         </div>
     );
 };

@@ -7,11 +7,11 @@ const PrivateRoutes = ({children}) => {
     const location=useLocation();
 
     if(loading){
-        return <div className='text-center w-11/12 mx-auto my-40'><i className='loading loading-spinner font-bold text-3xl  '></i></div>
+        return <div className='text-center w-11/12 mx-auto my-40'><i className='loading loading-bars font-bold text-3xl  '></i></div>
     }
 
     if(user?.email){
-        return children 
+        return children ;
     }
 
 
