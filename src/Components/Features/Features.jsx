@@ -18,9 +18,9 @@ const Features = () => {
     },[])
 
     return (
-        <div>
+        <div className='lg:w-4/5 mx-auto'>
             <div className='mt-10 text-center'>
-                <h2 className='font-bold text-2xl'>Features</h2>
+                <h2 className='font-bold text-2xl btn btn-ghost'>Features</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center my-5'>
                 {
