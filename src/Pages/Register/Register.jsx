@@ -23,7 +23,7 @@ const Register = () => {
         const terms= form.terms.checked;
 
         console.log({name, email,password, terms})
-
+        
                 
         // password validation
         if (password.length < 8) {

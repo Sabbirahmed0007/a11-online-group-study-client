@@ -41,12 +41,12 @@ const Routes = createBrowserRouter([
             {
                 path:'/updatedata/:id',
                 element:<PrivateRoutes><Updatedata></Updatedata></PrivateRoutes>,
-                loader: ({params})=>fetch(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/singleassignment/${params.id}`)
+                loader: ({params})=>fetch(`https://online-group-study-server-rho.vercel.app/singleassignment/${params.id}`)
             },
             {
                 path:'/details/:id',
                 element:<PrivateRoutes><Details></Details></PrivateRoutes>,
-                loader: ({params})=>fetch(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/singleassignment/${params.id}`)
+                loader: ({params})=>fetch(`https://online-group-study-server-rho.vercel.app/singleassignment/${params.id}`)
             },
             {
                 path:'/myassignments',

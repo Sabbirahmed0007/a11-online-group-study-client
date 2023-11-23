@@ -17,7 +17,7 @@ const MyAssignment = () => {
     }
 
 
-    const url= `https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/myassignments?email=${user?.email}`;
+    const url= `https://online-group-study-server-rho.vercel.app/myassignments?email=${user?.email}`;
 
     useEffect(()=>{
         axios.get(url, {withCredentials:true})
@@ -38,7 +38,7 @@ const MyAssignment = () => {
                 
     //         // })
     //         // .then(res=>res.json())
-    //         axios.delete(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignment/${id}`, {withCredentials:true})
+    //         axios.delete(`https://online-group-study-server-rho.vercel.app/allassignment/${id}`, {withCredentials:true})
     //         .then(res=>{
     //             console.log(res.data)
     //             if(res.data.deletedCount > 0){
@@ -59,7 +59,7 @@ const MyAssignment = () => {
         if (proceed) {
             // Compare the current user's email with the assignment creator's email
             if (user.email === assignmentEmail) {
-                axios.delete(`https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/allassignment/${id}`, { withCredentials: true })
+                axios.delete(`https://online-group-study-server-rho.vercel.app/allassignment/${id}`, { withCredentials: true })
                     .then(res => {
                         if (res.data.success) {
                             Swal.fire('', 'Deleted successfully', 'success');

@@ -8,7 +8,7 @@ const Banner = () => {
     const [banners, setBanners]=useState([]);
 
     useEffect(()=>{
-        axios.get('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/banners')
+        axios.get('https://online-group-study-server-rho.vercel.app/banners', {withCredentials:true})
         .then(res=>{
             console.log(res.data);
             setBanners(res.data);

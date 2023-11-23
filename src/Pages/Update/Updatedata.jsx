@@ -35,7 +35,7 @@ const Updatedata = () => {
         const updatedinfos= {title,email, description, img, level, marks, date};
         console.log(updatedinfos);
 
-        axios.put( `https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/updateassignment/${_id}`, updatedinfos, {withCredentials:true})
+        axios.put( `https://online-group-study-server-rho.vercel.app/updateassignment/${_id}`, updatedinfos, {withCredentials:true})
         .then(res=>{
             console.log(res.data);
             if(res.data.modifiedCount){

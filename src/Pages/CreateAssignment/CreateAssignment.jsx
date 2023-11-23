@@ -23,7 +23,7 @@ const CreateAssignment = () => {
         const infos= {title,email, description, img, level, marks, date};
         console.log(infos);
 
-        axios.post('https://online-group-study-server-fuspky8v4-sabbirahmed0007.vercel.app/createassignments', infos, {withCredentials:true})
+        axios.post('https://online-group-study-server-rho.vercel.app/createassignments', infos, {withCredentials:true})
         .then(res=>{
             console.log(res.data);
             if(res.data.insertedId){
